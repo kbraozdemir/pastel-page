@@ -1,0 +1,18 @@
+[
+ {
+  "id": 1,
+  "title": "Next.js ile JSON Tabanlı Blog Yapısı Kurmak",
+  "description": "Next.js ve Tailwind CSS kullanarak JSON tabanlı içerik yönetimi nasıl kurulur?",
+  "date": "2025-08-11",
+  "content": "# Next.js ile JSON Tabanlı Blog Yapısı Kurmak\n\nBu yazıda, Next.js ile statik bir blog yapısı kurarken JSON dosyalarını nasıl içerik kaynağı olarak kullanabileceğimizi anlatacağım.\n\n## Proje Yapısı\n\n```bash\n/pages\n  /blog\n    [id].tsx\n/data\n  blogPosts.json\n/components\n  BlogCard.tsx\n```\n\n## JSON Dosyası Örneği\n\n```json\n[\n  {\n    \"id\": 1,\n    \"title\": \"Next.js ile JSON Blog\",\n    \"description\": \"JSON tabanlı içerik yönetimi\",\n    \"date\": \"2025-08-11\",\n    \"content\": \"...\"\n  }\n]\n```\n\n## İçeriği Sayfaya Aktarmak\n\n```tsx\nimport blogPosts from '@/data/blogPosts.json';\n\nexport default function BlogPage() {\n  return (\n    <div>\n      {blogPosts.map(post => (\n        <BlogCard key={post.id} {...post} />\n      ))}\n    </div>\n  );\n}\n```\n\n## Neden JSON?\n\n- Kolay düzenlenebilir\n- CMS kullanmadan içerik kontrolü\n- Statik site üretimi için ideal\n\n## Karşılaştığım Sorunlar\n\n- JSON import hatası (çözüm: `resolveJsonModule` aktif olmalı)\n- Tailwind class çakışmaları\n\n## Sonuç\n\nBu yapı, hem sade hem de geliştirici dostu. Mülakatlarda projeyi anlatırken “içeriği JSON’dan çekiyorum” demek, teknik derinlik gösterir.",
+  "image": "/images/nextjs-blog.jpg"
+
+},
+{
+  "id": 2,
+  "title": "Tailwind ile Stil Yönetimi",
+  "description": "Utility-first yaklaşımı nasıl benimsedim?",
+  "date": "2025-08-08",
+  "image":"/images/nextjs-blog.jpg"
+}
+]
