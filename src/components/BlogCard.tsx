@@ -1,37 +1,39 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
 
-interface BlogPost {
-  id: number;
+interface BlogCardProps {
   title: string;
   description: string;
   date: string;
-  image: string;
+  imageUrl: string;
+  tags?: string[];
 }
 
-const BlogCard = ({ post }: { post: BlogPost }) => {
+export default function BlogCard({ title, description, date, imageUrl, tags }: BlogCardProps) {
   return (
-    <Link href={`/blog/${post.id}`}>
-      <div className="bg-pink-50 border border-pink-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={600}
-          height={400}
-          className="rounded-lg object-cover"
-        />
-        <h2 className="text-xl font-semibold text-pink-600">{post.title}</h2>
-        <p className="text-gray-700 mb-2">{post.description}</p>
-        <span className="text-sm text-gray-500">{formatDate(post.date)}</span>
+    <div className="opacity-0 animate-fadeIn transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-md mx-auto">
+      <img
+        src={imageUrl}
+        alt={title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <div className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">{date}</div>
+        <h2 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{title}</h2>
+        <p className="mt-2 text-zinc-600 dark:text-zinc-300">{description}</p>
+        {tags && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200 px-2 py-1 rounded-full text-xs font-medium"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
-    </Link>
-
+    </div>
   );
-};
-
-const formatDate = (dateString: string) => {
-  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
-export default BlogCard;

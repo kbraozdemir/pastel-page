@@ -3,14 +3,23 @@ import BlogCard from '@/components/BlogCard';
 
 export default function HomePage() {
   return (
-    <main className="max-w-3xl mx-auto py-8 px-4">
-      
-      <h1 className="text-3xl font-bold text-pink-700 text-center mb-8">Welcome to My Blog</h1>
-      <div className="bg-pink-50 border border-pink-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
-        {blogPosts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
-      </div>
-    </main>
+    <div className="bg-pink-200 text-gray-900 p-6 rounded-lg shadow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8">
+      <BlogCard
+        title="Tailwind ile Blog Tasarımı"
+        description="Bu yazıda pastel temalı bir blog kartı bileşeni nasıl oluşturulur, adım adım inceliyoruz."
+        date="22 Ağustos 2025"
+        imageUrl="https://source.unsplash.com/featured/?pastel,design"
+        tags={["tailwind", "tasarım", "blog"]}
+      />
+
+      <BlogCard
+        title="Pastel Tasarımın Gücü"
+        description="Pastel tonlar, sade arayüzlerde kullanıcıyı yormadan dikkat çekmeyi başarır. Bu yazıda pastel estetiğin teknik projelere etkisini inceliyoruz."
+        date="22 Ağustos 2025"
+        imageUrl="https://source.unsplash.com/featured/?pastel,design"
+        tags={["tasarım", "pastel", "UI"]}
+      />
+
+    </div>
   );
 }
