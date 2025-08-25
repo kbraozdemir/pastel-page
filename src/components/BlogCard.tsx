@@ -6,9 +6,10 @@ interface BlogCardProps {
   date: string;
   imageUrl: string;
   tags?: string[];
+  slug?: string; // Eğer blog detayına link vermek istiyorsanız
 }
 
-export default function BlogCard({ title, description, date, imageUrl, tags }: BlogCardProps) {
+export default function BlogCard({ title, description, date, imageUrl, tags, slug }: BlogCardProps) {
   return (
     <div className="opacity-0 animate-fadeIn transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-md mx-auto">
       <img
@@ -32,8 +33,13 @@ export default function BlogCard({ title, description, date, imageUrl, tags }: B
             ))}
           </div>
         )}
+        {/* Eğer blog detayına link vermek istiyorsanız: */}
+        {slug && (
+          <Link href={`/blog/${slug}`} className="block mt-4 text-pink-600 hover:underline text-sm">
+            Devamını oku
+          </Link>
+        )}
       </div>
     </div>
   );
 }
-

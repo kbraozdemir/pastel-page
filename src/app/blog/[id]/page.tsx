@@ -14,7 +14,8 @@ interface BlogPost {
 }
 
 export default function BlogDetail({ params }: { params: { id: string } }) {
-  const post: BlogPost | undefined = blogPosts.find((p) => p.id === parseInt(params.id));
+  const post = blogPosts.find((p) => p.id.toString() === params.id);
+
 
   if (!post) {
     return <div className="text-center py-20 text-gray-500">Yazı bulunamadı.</div>;
@@ -22,9 +23,9 @@ export default function BlogDetail({ params }: { params: { id: string } }) {
 
   return (
     <main className="max-w-2xl mx-auto py-10 px-4">
-      {post.image && (
+      {post.imageUrl && (
       <Image
-        src={post.image}
+        src={post.imageUrl}
         alt={post.title}
         width={800}
         height={500}
