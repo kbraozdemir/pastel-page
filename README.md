@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pastel Blog
 
-## Getting Started
+Minimal tasarım, modüler yapı ve geliştirici dostu içerik yönetimiyle hazırlanmış bir teknik blog projesidir. Next.js 14 ve Tailwind CSS kullanılarak geliştirilmiştir. İçerikler JSON formatında yönetilir, mobil uyumlu ve sade bir arayüz sunar.
 
-First, run the development server:
+---
+
+## Özellikler
+
+- ⚡ Next.js 14 ile sunucu tarafı rendering
+-  Tailwind CSS ile pastel ve sade tasarım
+-  JSON tabanlı içerik yönetimi
+-  Mobil uyumlu scrollable header ve footer
+-  Markdown destekli görsel ve metin entegrasyonu
+-  GitHub SSH bağlantısı ile güvenli geliştirme
+
+---
+
+## Kurulum
+
+Projeyi klonlayın:
 
 ```bash
+git clone https://github.com/kbraozdemir/pastel-page
+cd blog-project
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## İçerik Ekleyin
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Yeni bir blog yazısı eklemek için data/posts.json dosyasına aşağıdaki formatta içerik ekleyin:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+{
+  "id": "blog-001",
+  "title": "Next.js ile Teknik Blog Geliştirme",
+  "date": "2025-08-30",
+  "tags": ["nextjs", "blog", "tailwind"],
+  "content": "Markdown destekli içerik buraya gelecek..."
+}
 
-## Learn More
+## Yayınlama
 
-To learn more about Next.js, take a look at the following resources:
+Projeyi kolayca Vercel üzerinden deploy edebilirsiniz:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Vercel hesabı oluşturun
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    GitHub reposunu bağlayın
 
-## Deploy on Vercel
+    Deploy butonuna tıklayın
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Alternatif olarak Netlify veya kendi sunucunuzda da yayınlayabilirsiniz.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##Geliştirici
+
+Kübra – Bilgisayar programcılığı mezunu, teknik içerik üreticisi ve sade tasarım tutkunu. 
+
+    LinkedIn: "https://www.linkedin.com/in/k%C3%BCbra-%C3%B6zdemir-181633327/"
+    Github: "https://github.com/kbraozdemir"
+
+## Notlar
+
+    Proje, mülakatlarda ve portfolyo sunumlarında teknik yetkinliği göstermek amacıyla hazırlanmıştır.
+
+    Kod yapısı modülerdir, yeni özellikler kolayca entegre edilebilir.
+
+    Geri bildirim ve katkılar memnuniyetle karşılanır. 
+
+## Kaynaklar
+
+    [Next.JS Dokümantasyonu](https://nextjs.org/)
+    [Tailwind CSS](https://tailwindcss.com)
+    [Vercel](https://vercel.com)
+
+Bu proje, sade ama güçlü bir teknik kimlik oluşturmak isteyen geliştiriciler için örnek teşkil eder.
