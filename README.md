@@ -30,6 +30,7 @@ npm run dev
 
 Yeni bir blog yazısı eklemek için data/posts.json dosyasına aşağıdaki formatta içerik ekleyin:
 
+```JSON
 {
   "id": "blog-001",
   "title": "Next.js ile Teknik Blog Geliştirme",
@@ -37,17 +38,17 @@ Yeni bir blog yazısı eklemek için data/posts.json dosyasına aşağıdaki for
   "tags": ["nextjs", "blog", "tailwind"],
   "content": "Markdown destekli içerik buraya gelecek..."
 }
-
+```
 
 ## Yayınlama
 
 Projeyi kolayca Vercel üzerinden deploy edebilirsiniz:
 
-    Vercel hesabı oluşturun
+  Vercel hesabı oluşturun
 
-    GitHub reposunu bağlayın
+  GitHub reposunu bağlayın
 
-    Deploy butonuna tıklayın
+  Deploy butonuna tıklayın
 
 Alternatif olarak Netlify veya kendi sunucunuzda da yayınlayabilirsiniz.
 
@@ -55,21 +56,21 @@ Alternatif olarak Netlify veya kendi sunucunuzda da yayınlayabilirsiniz.
 
 Kübra – Bilgisayar programcılığı mezunu, teknik içerik üreticisi ve sade tasarım tutkunu. 
 
-    LinkedIn: "https://www.linkedin.com/in/k%C3%BCbra-%C3%B6zdemir-181633327/"
-    Github: "https://github.com/kbraozdemir"
+  LinkedIn: "https://www.linkedin.com/in/k%C3%BCbra-%C3%B6zdemir-181633327/"
+  Github: "https://github.com/kbraozdemir"
 
 ## Notlar
 
-    Proje, mülakatlarda ve portfolyo sunumlarında teknik yetkinliği göstermek amacıyla hazırlanmıştır.
+   Proje, mülakatlarda ve portfolyo sunumlarında teknik yetkinliği göstermek amacıyla hazırlanmıştır.
 
-    Kod yapısı modülerdir, yeni özellikler kolayca entegre edilebilir.
+   Kod yapısı modülerdir, yeni özellikler kolayca entegre edilebilir.
 
-    Geri bildirim ve katkılar memnuniyetle karşılanır. 
+   Geri bildirim ve katkılar memnuniyetle karşılanır. 
 
 ## Kaynaklar
 
-    [Next.JS Dokümantasyonu](https://nextjs.org/)
-    [Tailwind CSS](https://tailwindcss.com)
-    [Vercel](https://vercel.com)
+  - [Next.JS Dokümantasyonu](https://nextjs.org/)
+  - [Tailwind CSS](https://tailwindcss.com)
+  - [Vercel](https://vercel.com)
 
 Bu proje, sade ama güçlü bir teknik kimlik oluşturmak isteyen geliştiriciler için örnek teşkil eder.
