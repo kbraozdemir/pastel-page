@@ -24,6 +24,7 @@ git clone https://github.com/kbraozdemir/pastel-page
 cd blog-project
 npm install
 npm run dev
+```
 
 ## İçerik Ekleyin
 
@@ -36,6 +37,7 @@ Yeni bir blog yazısı eklemek için data/posts.json dosyasına aşağıdaki for
   "tags": ["nextjs", "blog", "tailwind"],
   "content": "Markdown destekli içerik buraya gelecek..."
 }
+
 
 ## Yayınlama
 
