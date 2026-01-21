@@ -13,8 +13,10 @@ interface BlogPost {
   image?: string;
 }
 
-export default function BlogDetail({ params }: { params: { id: string } }) {
-  const post = blogPosts.find((p) => p.id.toString() === params.id);
+export default function BlogDetail({ params }: { params: { slug: string } }) {
+  const post = blogPosts.find(
+  (p) => p.slug === params.slug
+);
 
 
   if (!post) {
@@ -45,7 +47,7 @@ export default function BlogDetail({ params }: { params: { id: string } }) {
       <div className="prose prose-pink max-w-none">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
-      <Link href="/blog" className="mt-6 inline-block bg-pink-100 text-pink-700 px-4 py-2 rounded hover:bg-pink-200 transition">
+      <Link href="/" className="mt-6 inline-block bg-pink-100 text-pink-700 px-4 py-2 rounded hover:bg-pink-200 transition">
         ← Tüm Yazılara Dön
         </Link>
     </main>

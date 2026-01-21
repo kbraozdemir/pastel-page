@@ -1,15 +1,14 @@
 [
  {
   "id": 1,
-  "title": "Next.js ile JSON Tabanlı Blog Yapısı Kurmak",
-  "description": "Next.js ve Tailwind CSS kullanarak JSON tabanlı içerik yönetimi nasıl kurulur?",
-  "date": "2025-08-11",
-  "content": "# Next.js ile JSON Tabanlı Blog Yapısı Kurmak\n\nBu yazıda, Next.js ile statik bir blog yapısı kurarken JSON dosyalarını nasıl içerik kaynağı olarak kullanabileceğimizi anlatacağım.\n\n## Proje Yapısı\n\n```bash\n/pages\n  /blog\n    [id].tsx\n/data\n  blogPosts.json\n/components\n  BlogCard.tsx\n```\n\n## JSON Dosyası Örneği\n\n```json\n[\n  {\n    \"id\": 1,\n    \"title\": \"Next.js ile JSON Blog\",\n    \"description\": \"JSON tabanlı içerik yönetimi\",\n    \"date\": \"2025-08-11\",\n    \"content\": \"...\"\n  }\n]\n```\n\n## İçeriği Sayfaya Aktarmak\n\n```tsx\nimport blogPosts from '@/data/blogPosts.json';\n\nexport default function BlogPage() {\n  return (\n    <div>\n      {blogPosts.map(post => (\n        <BlogCard key={post.id} {...post} />\n      ))}\n    </div>\n  );\n}\n```\n\n## Neden JSON?\n\n- Kolay düzenlenebilir\n- CMS kullanmadan içerik kontrolü\n- Statik site üretimi için ideal\n\n## Karşılaştığım Sorunlar\n\n- JSON import hatası (çözüm: `resolveJsonModule` aktif olmalı)\n- Tailwind class çakışmaları\n\n## Sonuç\n\nBu yapı, hem sade hem de geliştirici dostu. Mülakatlarda projeyi anlatırken “içeriği JSON’dan çekiyorum” demek, teknik derinlik gösterir.",
-  "imageUrl": "/images/nextjs-blog.jpg",
-  "tags": ["nextjs", "json", "blog"],
-  "slug": "nextjs-ile-json-tabanli-blog-yapisi-kurmak"
-
+  "title": "Hiçbir Şey İçin Yetersiz Değilsin",
+  "description": "Yavaş ama kalıcı öğrenmenin, yetersizlik hissiyle barışmanın ve kendi öğrenme yolculuğumu sahiplenmenin hikâyesi.",
+  "date": "2026-01-21",
+  "slug": "hicbir-sey-icin-yetersiz-degilsin",
+  "imageUrl": "/images/hicbir-sey-için-yetersiz-degilsin.png",
+  "content": "# Hiçbir Şey İçin Yetersiz Değilsin\n\nHerkese merhaba.\nİlk blog yazıma küçük bir *YouTuber girişi* yapmış olayım. 🙂\n\nYaklaşık **5 yıldır kod yazıyorum**.\nBu süreçte çeşitli ekiplere dahil oldum ve kendimi geliştirmek adına birçok uygulama kodladım.\n\nPeki yeterli olduğumu düşünüyor muyum?\n\n**Hayır.**\n\n## Neden mi?\n\nKendime sorduğumda cevabı hep aynı yere çıkıyor:\nHâlâ bir şeyler bilmiyormuş gibi hissediyorum.\nHâlâ başkalarına sorma ihtiyacı duyuyorum.\nAI’ın bana oluşturduğu testlerde başarısız oluyorum.\n\nAma işin ilginç yanı şu:\n\nProjenin başına geçtiğimde,\nher şey sanki **otomatikmiş gibi** geliveriyor.\n\nTuhaf mı?\nKesinlikle.\n\n## Peki nasıl oluyor bu?\n\nAslında cevap çok basit:\nBen **yavaş öğreniyorum**, ama **kalıcı öğreniyorum**.\n\nSadece video dersleriyle yetinmiyorum.\nÖğrendiğim şeyi mutlaka **uygulamaya döküyorum**.\n\nZaten öğrenme döngüsünden çıkmam için bu, benim **birinci adımımdı**.\nAma bu şu anlama gelmiyor:\n\n> “Videoları tamamen bırak.”\n\nHayır.\n\nVideolar ve AI,\nyol gösterici olmaya devam edecek.\n\nAma şunu net bir şekilde biliyorum artık:\n\n**Bu geminin kaptanı benim.**\nVe her şey, dönüp dolaşıp **bende bitiyor**."
 },
+
 {
   "id": 2,
   "title": "Tailwind ile Stil Yönetimi",

@@ -6,7 +6,7 @@ interface BlogCardProps {
   date: string;
   imageUrl: string;
   tags?: string[];
-  slug?: string; // Eğer blog detayına link vermek istiyorsanız
+  slug?: string;
 }
 
 export default function BlogCard({ title, description, date, imageUrl, tags, slug }: BlogCardProps) {
@@ -33,7 +33,6 @@ export default function BlogCard({ title, description, date, imageUrl, tags, slu
             ))}
           </div>
         )}
-        {/* Eğer blog detayına link vermek istiyorsanız: */}
         {slug && (
           <Link href={`/blog/${slug}`} className="block mt-4 text-pink-600 hover:underline text-sm">
             Devamını oku
