@@ -7,7 +7,7 @@ export default function Footer() {
         <p className="text-sm">© Kübra Özdemir {new Date().getFullYear()} – Tüm hakları saklıdır.</p>
 
         <a
-            href="mailto:kubra@example.com"
+            href="mailto:kbraozdemir18@gmail.com"
             className="bg-gray-800 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition"
         >
             İletişime Geç
