@@ -1,24 +1,23 @@
 import posts from "@/data/blogPosts.json";
+import { notFound } from "next/navigation";
 
-type PageProps = {
-  params: Promise<{
+type Props = {
+  params: {
     slug: string;
-  }>;
+  };
 };
 
-export default async function Page({ params }: PageProps) {
-  const { slug } = await params;
-
-  const post = posts.find((p) => p.slug === slug);
+export default function BlogPage({ params }: Props) {
+  const post = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
-    return <div>Yazı bulunamadı</div>;
+    notFound();
   }
 
   return (
-    <article>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-    </article>
+    <main className="max-w-2xl mx-auto py-10 px-4">
+      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+      <p>{post.description}</p>
+    </main>
   );
 }
