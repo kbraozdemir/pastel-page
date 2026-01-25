@@ -1,17 +1,24 @@
 import posts from "@/data/blogPosts.json";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function Page({ params }: PageProps) {
-  const { slug } = params;
+export default async function Page({ params }: PageProps) {
+  const { slug } = await params;
+
+  const post = posts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return <div>Yazı bulunamadı</div>;
+  }
 
   return (
-    <div>
-      <h1>{slug}</h1>
-    </div>
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+    </article>
   );
 }
