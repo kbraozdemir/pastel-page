@@ -13,9 +13,10 @@ interface BlogPost {
   image?: string;
 }
 
-export default function BlogDetail({ params }: { params: { slug: string } }) {
+export default async function BlogDetail ({params}: {params: Promise<{slug: string}>}) {
+  const {slug} = await params;
   const post = blogPosts.find(
-  (p) => p.slug === params.slug
+  (p) => p.slug === slug
 );
 
 
