@@ -15,3 +15,9 @@ export default function Page({ params }: Props) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
