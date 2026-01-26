@@ -1,7 +1,17 @@
-export default function Page() {
+import posts from "@/data/blogPosts.json";
+
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function Page({ params }: Props) {
+  const { slug } = params;
+
   return (
-    <div className="text-center py-20 text-gray-500">
-      Blog yazısı geçici olarak kapalı.
+    <div>
+      <h1>{slug}</h1>
     </div>
   );
 }
